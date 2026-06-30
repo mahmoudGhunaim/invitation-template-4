@@ -32,15 +32,6 @@ const PinIcon = () => (
     <circle cx="24" cy="18" r="5" />
   </svg>
 )
-const DressIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5"
-       strokeLinecap="round" strokeLinejoin="round" width="40" height="40">
-    <path d="M18 6 L14 18 L6 42 H42 L34 18 L30 6" />
-    <path d="M18 6 Q24 12 30 6" />
-    <line x1="24" y1="6" x2="24" y2="18" />
-  </svg>
-)
-
 // Gallery icons — minimal/modern
 const HeartIcon = () => (
   <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" strokeWidth="1.5" width="52" height="52">
@@ -94,7 +85,6 @@ const C = {
     date: 'التاريخ', dateVal: 'الثلاثاء\n٣٠ يونيو ٢٠٢٦',
     time: 'الوقت', timeVal: 'الساعة ٥ عصراً\nحتى منتصف الليل',
     venue: 'المكان', venueVal: 'قاعات النعمان\nللاحتفالات، عمّان',
-    dress: 'الزي المطلوب', dressVal: 'أناقة عصرية\nألوان ناعمة',
     mapTitle: 'الوصول إلى المكان',
     mapAddr: 'قاعات النعمان للاحتفالات · عمّان',
     galleryTitle: 'من قصة حبنا',
@@ -128,7 +118,6 @@ const C = {
     date: 'Date', dateVal: 'Tuesday\nJune 30, 2026',
     time: 'Time', timeVal: '5:00 PM\nUntil Late',
     venue: 'Venue', venueVal: 'Al-Numan Halls\nAmman, Jordan',
-    dress: 'Dress Code', dressVal: 'Modern Elegant\nSoft Colours',
     mapTitle: 'Getting There',
     mapAddr: 'قاعات النعمان للاحتفالات · Amman',
     galleryTitle: 'Our Love Story',
@@ -285,11 +274,6 @@ function LandingPage({ c }: { c: Content }) {
             <div className="detail-icon detail-icon--3"><PinIcon /></div>
             <h3>{c.venue}</h3>
             <p>{c.venueVal.split('\n').map((l, i) => <span key={i}>{l}{i === 0 && <br />}</span>)}</p>
-          </div>
-          <div className="detail-card">
-            <div className="detail-icon detail-icon--4"><DressIcon /></div>
-            <h3>{c.dress}</h3>
-            <p>{c.dressVal.split('\n').map((l, i) => <span key={i}>{l}{i === 0 && <br />}</span>)}</p>
           </div>
         </div>
       </section>
